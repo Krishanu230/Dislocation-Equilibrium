@@ -172,7 +172,7 @@ for itr in range(maxTimeSteps):
     forceXY = overallDisForcesXY(darr, materialParams)
     print("Force on dislocations")
     print(forceXY)
-    maxForce = np.max(abs(forceXY))
+    maxForce = np.min(abs(forceXY))
     delT = maxDelX/maxForce
     #now we move each dislocation
     for i in range(len(darr)):
